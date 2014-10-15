@@ -15,5 +15,6 @@
     <body>
         <h1>DiceRoller!</h1>
         Rolling dice gave a ${my:rollIt()}
+        Så er  de rtest!
     </body>
 </html>
