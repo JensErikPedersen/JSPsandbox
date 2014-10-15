@@ -16,6 +16,10 @@
         
         Dog's name: ${param.name}<br/>
         Dog's age: ${param["age"]}<br/>
-        Dog's race: ${param.race}<br/>        
+        Dog's race: ${param.race}<br/>
+        Dog's name (from paramValues): ${paramValues.name[0]}
+        
+        
+        
     </body>
 </html>

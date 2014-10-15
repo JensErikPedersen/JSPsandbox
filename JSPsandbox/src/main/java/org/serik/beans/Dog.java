@@ -13,6 +13,7 @@ public class Dog {
     private String name;
     private String race;
     private int age;
+    private Toy[] toys;
 
     public Dog() {
     
@@ -40,6 +41,20 @@ public class Dog {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    /**
+     * @return the toys
+     */
+    public Toy[] getToys() {
+        return toys;
+    }
+
+    /**
+     * @param toys the toys to set
+     */
+    public void setToys(Toy[] toys) {
+        this.toys = toys;
     }
    
 }
