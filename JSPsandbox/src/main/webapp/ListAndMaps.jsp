@@ -21,5 +21,13 @@
         Music map contains: ${musicMap}<br/>
         Ambient is: ${musicMap.Ambient}<br/>
         Rock is: ${musicMap["Rock"]}<br/>
+        
+        <h1>Map with attribute as key</h1>
+        The selected Genre is: ${Genre}<br/>
+        In music map the artist for the Genre is: ${musicMap[Genre]}
+        
+        <h1>Nested expressions</h1>
+        Music types are: ${musicTypes}<br/>
+        Artist for ${musicTypes[0]} is ${musicMap[musicTypes[0]]}
     </body>
 </html>

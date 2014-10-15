@@ -3,23 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package org.serik.servlets;
+
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.serik.beans.Dog;
+import org.serik.beans.Person;
+import org.serik.beans.Toy;
 
 /**
  *
  * @author IEUser
  */
-public class ListMapServlet extends HttpServlet {
+public class PersonDogAndToys extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,26 +33,21 @@ public class ListMapServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<String> favoritFood = new ArrayList<String>();
-        favoritFood.add("T-Bone");
-        favoritFood.add("fajitas");
-        favoritFood.add("thai food");
-        favoritFood.add("homemade pizza");
-        favoritFood.add("Lasagne");
-        
-        request.setAttribute("favoritFood", favoritFood);
-        
-        Map<String, String> musicMap = new HashMap<String, String>();
-        musicMap.put("Ambient", "Zero 7");
-        musicMap.put("Surf", "Tahiti 80");
-        musicMap.put("DJ", "BT");
-        musicMap.put("Indie", "Travis");
-        musicMap.put("Rock", "U2");
-        
-        request.setAttribute("musicMap", musicMap);    
-        
-        
-        RequestDispatcher view = getServletContext().getRequestDispatcher("/ListAndMaps.jsp");
+      Person p = new Person();
+      p.setName("Homer");
+      Dog dog = new Dog();
+      dog.setName("Fido");
+      Toy t1 = new Toy();
+      t1.setName("stick");
+      Toy t2 = new Toy();
+      t2.setName("neighbor's cat");
+      Toy t3 = new Toy();
+      t3.setName("Barbie dolls head");
+      dog.setToys(new Toy[] {t1, t2, t3});
+      p.setDog(dog);
+      request.setAttribute("person", p);
+      
+        RequestDispatcher view = request.getRequestDispatcher("PersonDogAndToys.jsp");
         view.forward(request, response);
     }
 

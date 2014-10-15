@@ -6,7 +6,15 @@
     </servlet>
     <servlet>
         <servlet-name>ListMapServlet</servlet-name>
-        <servlet-class>ListMapServlet</servlet-class>
+        <servlet-class>org.serik.servlets.ListMapServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PersonDogAndToys</servlet-name>
+        <servlet-class>org.serik.servlets.PersonDogAndToys</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SetCookieServlet</servlet-name>
+        <servlet-class>org.serik.servlets.SetCookieServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>NewDoggyServlet</servlet-name>
@@ -16,9 +24,21 @@
         <servlet-name>ListMapServlet</servlet-name>
         <url-pattern>/ListMapServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PersonDogAndToys</servlet-name>
+        <url-pattern>/PersonDogAndToys</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SetCookieServlet</servlet-name>
+        <url-pattern>/SetCookieServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <context-param>
+        <param-name>adminemail</param-name>
+        <param-value>homer@simpsons.org</param-value>
+    </context-param>
 </web-app>

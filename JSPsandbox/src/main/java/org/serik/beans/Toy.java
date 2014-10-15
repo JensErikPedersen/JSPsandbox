@@ -9,11 +9,8 @@ package org.serik.beans;
  *
  * @author IEUser
  */
-public class Person {
+public class Toy {
     private String name;
-    private Dog dog;
-    
-    public Person() {}
 
     /**
      * @return the name
@@ -27,19 +24,5 @@ public class Person {
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /**
-     * @return the dog
-     */
-    public Dog getDog() {
-        return dog;
-    }
-
-    /**
-     * @param dog the dog to set
-     */
-    public void setDog(Dog dog) {
-        this.dog = dog;
     }
 }
